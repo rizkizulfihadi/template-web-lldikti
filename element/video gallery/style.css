@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: poppins, sans-serif;
+    background-color: #888;
+}
+
+.video-kami{
+    margin: 50px auto;
+}
+
+.video-kami .wrap{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    align-items: flex-start;
+    padding: 5px 5%;
+}
+
+.video-kami .main-video{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.video-kami .main-video video{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.video-kami .main-video .judul{
+    color: #333;
+    font-size: 23px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.video-kami .video-list{
+    background-color: #fff;
+    border-radius: 10px;
+    height: 530px;
+    overflow-y: scroll;
+}
+
+.video-kami .video-list::-webkit-scrollbar{
+    width: 7px;
+}
+
+.video-kami .video-list::-webkit-scrollbar-track{
+    background-color: #ccc;
+    border-radius: 50px;
+}
+
+.video-kami .video-list::-webkit-scrollbar-thumb{
+    background-color: #666;
+    border-radius: 50px;
+}
+
+.video-kami .video-list .vid video{
+    width: 100px;
+    border-radius: 10px;
+}
+
+.video-kami .video-list .vid{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid rgb(0, 0, 0, .1);
+    cursor: pointer;
+}
+
+.video-kami .video-list .vid:hover{
+    background-color: #eee;
+}
+
+.video-kami .video-list .vid.active{
+    background-color: slateblue;
+}
+
+.video-kami .video-list .vid.active .judul{
+    color: #fff;
+}
+
+.video-kami .video-list .vid .judul{
+    color: #333;
+    font-size: 17px;
+}
+
+@media (max-width:991px) {
+    .video-kami .wrap{
+        grid-template-columns: 1.5fr 1fr;
+        padding: 10px;
+    }
+}
+
+@media (max-width:768px) {
+    .video-kami .wrap{
+        grid-template-columns: 1fr;
+    }
+}

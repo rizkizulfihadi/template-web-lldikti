@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="video-kami">
+       <div class="wrap">
+            <div class="main-video">
+                <video src="../../img/video1.mp4" controls></video>
+                <h3 class="judul">01. judul video disini</h3>
+            </div>
+
+            <div class="video-list">
+                <div class="vid active">
+                    <video src="../../img/video2.mp4"></video>
+                    <h3 class="judul">01. judul video disini</h3>    
+                </div>
+                <div class="vid">
+                    <video src="../../img/video2.mp4"></video>
+                    <h3 class="judul">02. judul video disini</h3>    
+                </div>
+                <div class="vid">
+                    <video src="../../img/video1.mp4"></video>
+                    <h3 class="judul">03. judul video disini</h3>    
+                </div>
+                <div class="vid">
+                    <video src="../../img/video2.mp4"></video>
+                    <h3 class="judul">04. judul video disini</h3>    
+                </div>
+                <div class="vid">
+                    <video src="../../img/video1.mp4"></video>
+                    <h3 class="judul">05. judul video disini</h3>    
+                </div>
+                <div class="vid">
+                    <video src="../../img/video2.mp4"></video>
+                    <h3 class="judul">06. judul video disini</h3>    
+                </div>
+                <div class="vid">
+                    <video src="../../img/video1.mp4"></video>
+                    <h3 class="judul">07. judul video disini</h3>    
+                </div>
+            </div>
+       </div> 
+    </section>
+
+    <script>
+        let listVideo = document.querySelectorAll('.video-list .vid')
+        let mainVideo = document.querySelector('.main-video video')
+        let judul = document.querySelector('.main-video .judul')
+
+        listVideo.forEach(video =>{
+            video.onclick = () =>{
+                listVideo.forEach(vid => vid.classList.remove('active'));
+                video.classList.add('active')
+                if(video.classList.contains('active')){
+                    let src = video.children[0].getAttribute('src')
+                    mainVideo.src = src
+                    let text = video.children[1].innerHTML
+                    judul.innerHTML = text;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

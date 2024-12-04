@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: poppins, sans-serif;
+}
+
+.faq .wrap{
+    width: 50%;
+    margin: 50px auto;
+}
+
+.faq h2{
+    color: slateblue;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.faq h2 span{
+    border-bottom: 2px solid slateblue;
+    padding: 5px;
+}
+
+.faq .accordion{
+    width: 100%;
+    border: 2px solid slateblue;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 10px 0;
+    align-items: center;
+    display: flex;
+    align-items: center;
+}
+
+.faq .icon{
+    color: #fff;
+    margin: 5px;
+    margin-right: 10px;
+    background-color: slateblue;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq .icon .fa-minus{
+    display: none;
+}
+
+.faq .active .icon .fa-minus{
+    display: block;
+}
+
+.faq .active .icon .fa-plus{
+    display: none;
+}
+
+.faq h5{
+    font-size: 20px;
+    color: slateblue;
+}
+
+.faq .panel{
+    padding: 0 30px;
+    border-left: 1px solid slateblue;   
+    margin-left: 25px;
+    font-size: 14px;
+    line-height: 30px;
+    overflow: hidden;
+    max-height: 0;
+    transition: .5s;
+}

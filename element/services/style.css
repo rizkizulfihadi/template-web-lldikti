@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: poppins, sans-serif;
+    color: #333;
+}
+
+section.services{
+    width: 90%;
+    margin: 50px auto;
+}
+
+.services .wrap{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 240px));
+    justify-content: center;
+    gap: 20px;
+}
+
+.services .container{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    text-align: center;
+    padding: 20px 30px 30px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.services .container:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.services .container::before{
+    transition: .4s;
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: #1F4690;
+    height: 3%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.services .container:hover::before{
+    height: 100%;
+    border-radius: 10px;
+}
+
+.services .container .icon{
+    width:150px;
+    height:150px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: 1s;
+}
+
+.services .container:hover .icon{
+    transform: rotate(360deg);
+}
+
+.services .container h4{
+    position: relative;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.services .container:hover h4{
+    color: #f2b250;
+}
+
+.services .container a{
+    color: #1F4690;
+    position: relative;
+    font-size: 15px;
+}
+
+section.services .container a:hover{
+    color: #acacac;
+}
+
+.services .container:hover a{
+    color: #fff;
+}

@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: poppins, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.title{
+    border-bottom: 2px solid #333;
+    width: 90%;
+    margin: 100px auto;
+}
+
+.title h3{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    padding:  0 54px;
+    font-size: 20px;
+    font-weight: 400;
+    position: relative;
+}
+
+.title h3::before{
+    content: "";
+    position: absolute;
+    left: 100%;
+    bottom: 0;
+    height: 0;
+    width: 0;
+    border: 20px solid #333;
+    border-top-color: transparent ;
+    border-right-color: transparent;
+}
+
+/* readmore */
+.readmore{
+    width: 90%;
+    margin: auto;
+    border-bottom: 2px solid #333;
+}
+
+.readmore h3{
+    text-align: right;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.readmore span{
+    transition: .5s;
+    background-color: #333;
+    position: relative;
+    padding: 7px 54px;
+    cursor: pointer;
+    bottom: 5px;
+
+}
+
+.readmore span::before{
+    transition: .5s;
+    content: "";
+    position: absolute;
+    right: 100%;
+    bottom: 0;
+    height: 0;
+    width: 0;
+    border: 21px solid #333;
+    border-top-color: transparent ;
+    border-left-color: transparent;
+}
+
+.readmore span:hover{
+    background-color: slateblue;
+}
+
+.readmore span:hover::before{
+    border: 21px solid slateblue;
+    border-top-color: transparent ;
+    border-left-color: transparent;
+}
